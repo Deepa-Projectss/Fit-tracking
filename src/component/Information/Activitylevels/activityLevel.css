@@ -1,0 +1,43 @@
+
+.level-info{
+    display: flex;
+}
+
+.activ-img1{
+    padding-left: 165px;
+    margin: 40px;
+}
+.activ-img2{
+    padding-top: 50px;
+    height: 200px;
+    padding-left: 40px;
+}
+.activ-img3{
+    padding-left: 140px;
+    margin: 30px;
+}
+.activ-options{
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px; 
+    padding-left: 330px;
+}
+.option{
+    width: 170px;
+    height: 45px;
+    border-radius: 60px;
+    margin-top: 40px;
+    margin-left: 20px;
+    border: 1px solid #F96118;
+    background-color: #F9611826;
+}
+.option:hover{
+    color:#F96118;
+}
+.btn-options{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+    margin-right: 180px;
+}

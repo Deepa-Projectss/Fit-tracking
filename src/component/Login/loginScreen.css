@@ -1,0 +1,131 @@
+.right-card {
+    /* margin: 20px; */
+    max-width: 500px;
+    margin: 50px 0px 0px 300px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #000000dc;
+}
+
+.login-page {
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.login-image {
+    /* width: 515px; */
+    height: 555px;
+    padding: 20px 60px 0px 10px;
+}
+
+/* .left-card {
+    /* padding: 0px 0px 0px 0px; */
+
+
+.heading {
+    font-weight: 700;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #002B5B;
+    margin-top: 20px;
+}
+
+.summary {
+    font-size: 12px;
+    font-weight: 400;
+    color: #002B5B;
+    font-family: sans-serif;
+}
+
+.input-data {
+    background-color: #F6F7F9;
+    padding: 5px;
+    border-radius: 10px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.input-value {
+    width: 300px;
+    background: #F6F7F9;
+    border: none;
+    outline: none;
+}
+
+.forgot-pw {
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #F96118;
+    display: flex;
+    justify-content: end;
+}
+
+.login-button {
+    width: 345px;
+    height: 35px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    background: #026900;
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
+.sigin {
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 5px;
+    color: #515978;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* .sigin::before,.sigin::after{
+    content: "";
+    display: block;
+    border: 10px #646fa7;
+    width: 92px;
+    position: absolute;
+    left: 0;right: 0;
+    top: 50%;
+} */
+.social-media {
+    height: 25px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.no-account {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #002B5B;
+    padding: 15px 0px 0px 3px;
+    display: flex;
+    justify-content: center;
+    /* height: 22px;
+    width: 350px; */
+}
+
+.btn-outline-success {
+
+    width: 30%;
+    margin-top: 5px;
+    margin-left: 135px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+@media(max-width:600px) {
+    .login-image {
+        display: none;
+    }
+}

@@ -1,0 +1,139 @@
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #D9E8D9;
+  /* padding: 5px; */
+}
+.nav-items.selected {
+  background-color: #FF7A00; /* Change to desired color */
+  border-radius: 5px; /* Optional: adds a border radius for a better look */
+}
+
+.fit-img {
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  padding-right: 80px;
+  gap: 50px;
+
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.nav-items img {
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+
+.nav-items .text-name {
+  font-size: 14px;
+  display: block;
+}
+.selectLink{
+  background-color: #FF7A00;
+}
+.profile-img {
+  padding-right: 70px;
+}
+
+.workout-img {
+  height: 65px;
+  width: 175px;
+  margin-left: 27%;
+  background-color: #026900;
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+}
+
+.subHeader {
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 5px;
+  color: #3E3E3E;
+}
+
+.activity-card {
+  background: #709dbb33;
+  padding: 10px;
+  border-radius: 3px;
+  margin-right: 20px;
+  width: 20%;
+}
+
+.exercise-container {
+  background-color: #f4f4f4;
+  display: flex;
+  margin-top: 5px;
+  padding: 10px;
+}
+.popular-text{
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color:#3E3E3E;
+  padding-top: 5px;padding-left: 10px ;
+}
+
+/* .popular-video {
+  height: 200px;
+  overflow: scroll;
+} */
+
+.footer-text {
+  color: #3E3E3E;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 5px;
+  padding: 5px;
+
+}
+
+.diet-plan {
+  display: flex;
+  justify-content: space-around;
+  background-color: #D9E8D9;
+  margin-left: 10px;
+  width: 490px;
+  height: 110px;
+}
+
+.add-btn {
+  margin-left: 150px;
+  height: 115px;
+  width: 76px;
+  border: 1px dashed#FF7A00;
+  background-color: #fff;
+}
+
+.food-time {
+  height: 37px;
+  width: 107px;
+  margin-left: 10px;
+  border: 1px solid#FF7A00;
+  background-color: #FF7A0026;
+}
+
+.food-items{
+  background-color: #F4F4F4;
+  margin-top: 10px;
+  margin-left: 15px;
+  height: 79px;
+  width: 85px;
+}
+.selected{
+  background-color: #FF7A00;
+}

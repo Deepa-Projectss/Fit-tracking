@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.detail-progress {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px
+}
+
+.progress1 {
+    width: 219px;
+    height: 20px;
+}
+
+.info-details {
+    display: flex;
+}
+
+.info-img1 {
+    padding-left: 165px;
+    margin: 40px;
+}
+
+.info-img2 {
+    padding-top: 50px;
+    height: 200px;
+}
+
+.info-img3 {
+    padding-left: 120px;
+    margin: 30px;
+}
+
+.gender {
+    padding-left: 165px;
+    margin: 40px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #282A37;
+}
+
+.options {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-left: 190px;
+    margin-bottom: 10px;
+}
+
+.gender-option {
+    border-radius: 20px;
+    text-align: center;
+    height: 50%;
+    /* padding: 10; */
+    padding: 5px;
+    border: 1px solid #F96118;
+    background-color: #F9611826;
+}
+
+.gender-label {
+    padding:  0px 30px 0px 2px;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #282A37;
+}
+
+.age {
+    padding-bottom: 10px;
+}
+
+.age-option {
+    padding-left: 16%;
+    margin-top: -20px;
+}
+
+.input-age input {
+    background-color: #F6F7F9;
+    Width: 261px;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+::placeholder {
+    font-family: sans-serif;
+}
+.charts{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.next-button1 {
+    display: flex;
+    justify-content: center;
+    /* padding-top: 30px; */
+}

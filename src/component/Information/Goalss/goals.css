@@ -1,0 +1,29 @@
+.goal-info{
+    display: flex;
+}
+.goal-img1{
+    padding-left: 165px;
+    margin: 40px;
+}
+.goal-img2{
+    padding-top: 45px;
+    height: 210px;
+    padding-left: 40px;
+}
+.goal-img3{
+    padding-left: 140px;
+    margin: 30px;
+}
+.goals-options{
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px; 
+    padding-left: 330px;
+}
+.btn-option{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+    margin-right: 180px;
+}

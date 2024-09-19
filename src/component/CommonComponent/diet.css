@@ -1,0 +1,32 @@
+.previous-text {
+    font-size: 18px;
+    font-weight: 700;
+    color: #3E3E3E;
+    padding-top: 10px;
+    padding-left: 15px;
+    border: none;
+}
+
+.previous-table table {
+    border-spacing: 0 10px; 
+    border-collapse: separate;
+    width: 100%; 
+}
+
+.previous-table th, 
+.previous-table td {
+    padding: 10px 20px; 
+    text-align: center; 
+   
+    
+}
+
+.previous-table tbody tr {
+    background-color: #FF7A000D; 
+    
+}
+.previous-table tbody td{
+    border: 1px solid #E1E1E1;
+}
+
+
