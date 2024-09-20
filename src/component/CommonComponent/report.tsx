@@ -7,12 +7,6 @@ import { workerData } from "worker_threads";
 export default function Report() {
 
     const navigate = useNavigate()
-    const report=[
-        {
-            id:1,
-            
-        }
-    ]
 
     const navbar = () => {
         return (
@@ -45,52 +39,80 @@ export default function Report() {
     }
     const reports = () => {
         return (
-            <div style={{ display: 'flex' }}>
-                <div className="reports" style={{ padding: '20px', background: '#F4F4F4' }}>
-                    <div className="report-contents">
-                        <div className="report-text">
-                            <span>Reports</span>
-                        </div>
-                        <div className="report-input" style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                            <input type="date" placeholder="This Month" />
-                        </div>
-                    </div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <div className="step-count">
-                            <text>hello</text>
-                        </div>
-                        <div className="cals-count" style={{ height: '250px', width: '200px', backgroundColor: 'white' }}>
-                            <div>
-                                <img src={require('../../images/rep-calories.svg').default} style={{ marginTop: '20px', marginLeft: '80px', marginBottom: '10px' }} alt="" /><br />
-                                <text className="report-img1">Calories Burned</text><br />
-                                <text style={{ margin: '65px', fontSize: '14px' }}>3600<span style={{ color: 'gray' }}>cal</span></text>
+            <div className="report-container">
+                <div style={{ display: 'flex' }}>
+                    <div className="reports" style={{ padding: '20px', marginLeft:'20px', background: '#F4F4F4' }}>
+                        <div className="report-contents">
+                            <div className="report-text">
+                                <span>Reports</span>
                             </div>
-                            <div>
-                                <img src={require('../../images/rep-monthlyGoal.svg').default} style={{ marginTop: '20px', marginLeft: '80px', marginBottom: '10px' }} alt="" /><br />
-                                <text className="report-img2">Monthly Goal</text><br />
-                                <text style={{ margin: '60px', fontSize: '14px' }}>7000<span style={{ color: 'gray' }}>steps</span></text>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="activity-rep">
-                    <div className="report-activity" style={{ padding: '20px', }}>
-                        <div className="activity-content">
-                            <div className="activity-text">
-                                <span>Today’s Activity</span>
-                            </div>
-                            <div className="activity-input" style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                            <div className="report-input" style={{ display: 'flex', justifyContent: 'flex-end' }}>
                                 <input type="date" placeholder="This Month" />
                             </div>
                         </div>
-                        <div>
-                            <div>
-
+                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                            <div className="step-count">
+                                <text>hello</text>
+                            </div>
+                            <div className="cals-count" style={{ height: '200px', width: '200px', backgroundColor: 'white' }}>
+                                <div>
+                                    <img src={require('../../images/rep-calories.svg').default} style={{ marginTop: '5px', marginLeft: '80px', marginBottom: '10px' }} alt="" /><br />
+                                    <text className="report-img1">Calories Burned</text><br />
+                                    <text style={{ margin: '65px', fontSize: '14px' }}>3600<span style={{ color: 'gray' }}>cal</span></text>
+                                </div>
+                                <div>
+                                    <img src={require('../../images/rep-monthlyGoal.svg').default} style={{ marginTop: '10px', marginLeft: '80px', marginBottom: '10px' }} alt="" /><br />
+                                    <text className="report-img2">Monthly Goal</text><br />
+                                    <text style={{ margin: '60px', fontSize: '14px' }}>7000<span style={{ color: 'gray' }}>steps</span></text>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="activity-rep">
+                        <div className="report-activity" style={{ padding: '20px', marginRight:'20px '}}>
+                            <div className="activity-content">
+                                <div className="activity-text">
+                                    <span>Today’s Activity</span>
+                                </div>
+                                <div className="activity-input" style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                                    <input type="date" placeholder="This Month" />
+                                </div>
+                            </div>
+                            <div className="exercise-timimg">
+                                <div style={{ display: 'flex', gap: '20px', margin: '10px' }}>
+                                    <div className="exercise-cal">
+                                        <img src={require('../../images/step-img.svg').default} style={{ marginBottom: '5px' }} alt="" />
+                                        <span className="texts">Step Taken</span><br />
+                                        <span>400</span>
+                                    </div>
+                                    <div className="exercise-cal">
+                                        <img src={require('../../images/time-img.svg').default} style={{ margin: '5px' }} alt="" />
+                                        <span className="texts">Active</span> <span style={{ color: '#3E3E3E', fontSize: '12px' }}>(mins)</span><br />
+                                        <span className="count-val" style={{ paddingTop: '10px' }}>400</span>
+                                    </div>
+                                </div>
+                                <div className="calories-cal">
+                                    <img src={require('../../images/calories-img.svg').default} style={{ margin: '5px' }} alt="" />
+                                    <span className="texts">Calories Burned</span><br />
+                                    <span className="count-val" style={{ paddingTop: '10px' }}>400</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div className="exercises-cont">
+                    <div  className="exercises-contents" style={{display:'flex'}}>
+                        <div className="exercises-texts">
+                            <span>Exercise</span>
+                        </div>
+                        <div className="exercisess-input">
+                            <input type="date" />
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
         )
     }
     return (
