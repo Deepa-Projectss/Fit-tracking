@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './goals.css'
 import { useNavigate } from "react-router";
 import ProgressBar from "react-bootstrap/ProgressBar";
@@ -7,12 +7,10 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 export default function Goals() {
     const navigate = useNavigate()
 
-    const handleBackbtn = () => {
-        // navigate('/activityLevel')
+    const [select, setSelect] = useState(null)
+    const changeColor = (index: any) => {
+        setSelect(index)
     }
-    // const handleNextbtn=()=>{
-    //     navigate('/')
-    // }
 
     return (
         <div className="goal-reach">
@@ -37,16 +35,16 @@ export default function Goals() {
             </div>
             <div className="goals-options">
                 <div>
-                    <button className="option">Lose Weight</button>
+                    <button className="option" onClick={() => changeColor(1)} style={{ background: select === 1?'#FF7A00':''}}>Lose Weight</button>
                 </div>
                 <div>
-                    <button className="option">Maintain Weight</button>
+                    <button className="option" onClick={() => changeColor(2)} style={{ background: select === 2?'#FF7A00':''}}>Maintain Weight</button>
                 </div>
                 <div>
-                    <button className="option">Gain Muscle</button>
+                    <button className="option" onClick={() => changeColor(3)} style={{ background: select === 3?'#FF7A00':''}}>Gain Muscle</button>
                 </div>
                 <div>
-                    <button className="option">Improve Fitness</button>
+                    <button className="option" onClick={() => changeColor(4)} style={{ background: select === 4?'#FF7A00':''}}>Improve Fitness</button>
                 </div>
             </div>
             <div className="btn-option">
@@ -59,9 +57,9 @@ export default function Goals() {
                     >Back</button>
                 </div>
                 <div className="next-button2">
-                    <button type="button" className="btn btn-success" style={{ width: "105%", marginTop:"5px", marginLeft:"50px" }} onClick={()=>navigate('/readySet')} >Next</button>
+                    <button type="button" className="btn btn-success" style={{ width: "105%", marginTop: "5px", marginLeft: "50px" }} onClick={() => navigate('/readySet')} >Next</button>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }

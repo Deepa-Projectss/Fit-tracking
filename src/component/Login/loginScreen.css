@@ -16,14 +16,9 @@
 }
 
 .login-image {
-    /* width: 515px; */
     height: 555px;
     padding: 20px 60px 0px 10px;
 }
-
-/* .left-card {
-    /* padding: 0px 0px 0px 0px; */
-
 
 .heading {
     font-weight: 700;
@@ -75,10 +70,11 @@
     /* justify-content: center; */
 }
 
-.sigin {
+.signin {
     font-family: sans-serif;
     font-weight: 400;
     font-size: 14px;
+    margin: 0px;
     padding: 5px;
     color: #515978;
     display: flex;

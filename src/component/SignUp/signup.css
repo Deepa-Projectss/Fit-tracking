@@ -7,6 +7,12 @@
     background-color: #fff;
     color: #000000dc;
 }
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
 
 .signup-page {
     display: flex;

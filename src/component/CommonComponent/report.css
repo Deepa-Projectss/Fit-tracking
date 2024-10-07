@@ -1,9 +1,10 @@
 .reports {
     margin-top: 10px;
-    margin-left: 50px;
     width: 640px;
     height: 315px;
-    background-color: #D9D9D9;
+    padding: 20px;
+    margin-left: 20px;
+    background: #F4F4F4
 }
 
 .report-contents {
@@ -11,7 +12,7 @@
     justify-content: space-between;
     background: #FFFFFF;
     padding: 10px;
-    margin: 10px 0;
+    margin: 10px;
 }
 
 .report-text {
@@ -65,13 +66,15 @@
     padding-top: 15px;
     padding-left: 20px;
 }
-.texts{
+
+.texts {
     font-weight: 600;
     font-size: 16px;
     color: #3E3E3E;
-    padding-left: 5px ;
+    padding-left: 5px;
 }
-.calories-cal{
+
+.calories-cal {
     height: 93px;
     width: 545px;
     background: #709dbb33;
@@ -79,4 +82,25 @@
     margin-top: 10px;
     padding-top: 15px;
     padding-left: 20px;
+}
+
+.exercisess {
+    margin-top: 10px;
+    height: 315px;
+    padding: 20px;
+    margin-left: 20px;
+    background: #F4F4F4;
+}
+
+.erxercises-contents {
+    background: #FFFFFF;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.exercises-text {
+    font-family: sans-serif;
+    color: #3E3E3E;
+    font-weight: 600;
 }

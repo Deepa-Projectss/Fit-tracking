@@ -3,11 +3,18 @@
   align-items: center;
   justify-content: space-between;
   background: #D9E8D9;
+  /* position: fixed;  */
+  width: 100%;     
+  /* z-index: 1;    */
+  padding: 5px 20px;  
   /* padding: 5px; */
 }
-.nav-items.selected {
-  background-color: #FF7A00; /* Change to desired color */
-  border-radius: 5px; /* Optional: adds a border radius for a better look */
+
+.nav-items .nav-icon.selected {
+  background-color: #FF7A00;
+  /* Change to desired color */
+  border-radius: 5px;
+  /* Optional: adds a border radius for a better look */
 }
 
 .fit-img {
@@ -36,14 +43,15 @@
   padding: 5px;
 }
 
-
 .nav-items .text-name {
   font-size: 14px;
   display: block;
 }
-.selectLink{
+
+.selectLink {
   background-color: #FF7A00;
 }
+
 .profile-img {
   padding-right: 70px;
 }
@@ -79,12 +87,14 @@
   margin-top: 5px;
   padding: 10px;
 }
-.popular-text{
+
+.popular-text {
   font-family: sans-serif;
   font-weight: 700;
   font-size: 18px;
-  color:#3E3E3E;
-  padding-top: 5px;padding-left: 10px ;
+  color: #3E3E3E;
+  padding-top: 5px;
+  padding-left: 10px;
 }
 
 /* .popular-video {
@@ -127,13 +137,14 @@
   background-color: #FF7A0026;
 }
 
-.food-items{
+.food-items {
   background-color: #F4F4F4;
   margin-top: 10px;
   margin-left: 15px;
   height: 79px;
   width: 85px;
 }
-.selected{
+
+.selected {
   background-color: #FF7A00;
 }

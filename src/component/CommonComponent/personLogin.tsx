@@ -1,115 +1,60 @@
 import React, { useState } from "react";
-import ReactPlayer from "react-player";
-import 'react-multi-carousel/lib/styles.css';
-import './home.css';
-import "bootstrap-icons/font/bootstrap-icons.css";
-import { Button } from "react-bootstrap";
 import { useLocation, useNavigate } from "react-router";
-import { url } from "inspector";
+import './personLogin.css'
+import ReactPlayer from "react-player";
 
-export default function Home() {
-
-    const location = useLocation(); // Get the current location
+export default function PersonLogin() {
+    const Navbar = () => {
+        const location = useLocation(); // Get the current location
     const navigate = useNavigate();
 
     const getNavItemStyle = (path: any) => {
         return location.pathname === path ? { color: '#F96118' } : {};
     };
-
-
-    const activity = [
-        {
-            id: 1,
-            image: require('../../images/step-img.svg').default,
-            text: "Steps Taken",
-            count: 400
-        },
-        {
-            id: 2,
-            image: require('../../images/time-img.svg').default,
-            text: "Active(mins)",
-            count: 40
-        },
-        {
-            id: 3,
-            image: require('../../images/calories-img.svg').default,
-            text: "Calories Burned",
-            count: 3600
-        }
-    ];
-
-    const diet = [
-        {
-            id: 1,
-            pic1: require('../../images/overallCalories-img.svg').default,
-            text: 'Overall Calories',
-            calories: 3600,
-        },
-        {
-            id: 2,
-            pic1: require('../../images/caloriestaken-img.svg').default,
-            text: 'Calories Taken',
-            calories: 3600
-
-        },
-        {
-            id: 3,
-            pic1: require('../../images/extraTaken-img.svg').default,
-            text: 'Extra Taken',
-            calories: 0
-        }
-    ]
-
-    const navbar = () => {
         return (
             <nav className=" navbar-light header-nav">
                 <div className='fit-img'>
                     <img src={require('../../images/fit-img.svg').default} alt="" />
                 </div>
-                <div className="nav-menu">
-                    <div className='nav-items' style={getNavItemStyle('/home')} onClick={() => navigate('/home')}>
-                        <img src={require('../../images/home-img.svg').default} alt="" style={{ cursor: 'pointer' }} />
+                <div className="nav-menu" onClick={() => navigate('/home')} style={{ cursor: 'pointer' }}>
+                    <div className='nav-items'>
+                        <img src={require('../../images/home-img.svg').default} alt="" />
                         <span className='text-name' >Home</span>
                     </div>
-                    <div className='nav-items' onClick={() => navigate('/diet')} >
-                        <img src={require('../../images/diet-img.svg').default} alt="" style={{ cursor: 'pointer' }} />
+                    <div className="nav-items" onClick={() => navigate('/diet')} style={{ cursor: 'pointer' }}>
+                        <img src={require('../../images/diet-img.svg').default} alt="" />
                         <text className='text-name' style={{ textAlign: 'center' }}>Diet</text>
                     </div>
-                    <div className='nav-items' onClick={() => navigate('/report')}>
-                        <img src={require('../../images/report-img.svg').default} alt="" style={{ cursor: 'pointer' }} />
+                    <div className="nav-items" onClick={() => navigate('/report')} style={{ cursor: 'pointer' }}>
+                        <img src={require('../../images/report-img.svg').default} alt="" />
                         <text className='text-name'>Report</text>
                     </div>
                 </div>
-                <div className="profile-img" onClick={() => navigate('/personLogin')} style={{ cursor: 'pointer' }}>
-                    <img src={require('../../images/profile-img.svg').default} alt="" />
+                <div className="profile-img" style={{cursor:'pointer'}}>
+                    <img src={require('../../images/profile-img.svg').default} alt="" style={{ ...getNavItemStyle('/personLogin'), cursor: 'pointer', border:'2px solid #F96118',borderRadius:'50%' }}/>
                 </div>
             </nav>
         )
     }
-    const todaysActivity = () => {
+    const ProfileDetail = () => {
         return (
-            <div>
-                <text className="subHeader">Today's Activity</text>
-
-                <div style={{ display: 'flex' }}>
-
-                    {(activity || []).map((item: any) =>
-                    (
-                        <div key={item?.id} className="activity-card">
-                            <div>
-                                <img src={item?.image} alt="" />
-                                <text style={{ paddingLeft: '5px' }}>{item.text}</text>
-                            </div>
-                            <text>{item?.count}</text>
-                        </div>
-                    )
-                    )}
-                    <button className="workout-img">
-                        <img src={require('../../images/heart-workout.svg').default} alt="" />
-                        <text>Workouts</text>
-                    </button>
+            <div style={{ display: 'flex',}}>
+                <div>
+                    <img className="profile-imgs" src={require('../../images/profileimage.svg').default} alt="" />
+                </div>
+                <div className="profile-text">
+                    <text>Gilbert Jasper Raj</text><br />
+                    <text>gilbertjasperraj@gmail.com</text>
+                </div>
+                <div style={{ marginTop: '50px', marginLeft: '35px' }}>
+                    <img src={require('../../images/edit-image.svg').default} alt="" />
+                </div>
+                <div style={{ marginLeft: '44%' }}>
+                    <button className="changing-password" >Change Password</button><br />
+                    <button className="loging-out">Log Out</button>
                 </div>
             </div>
+
         )
     }
     const ExerciseVideo = () => {
@@ -176,17 +121,14 @@ export default function Home() {
 
         const handleImageClick = (id: number) => {
             if (selectedImageId === id) {
-                setIsImageSelected(false);                         //if the video is selected then it will show the video thumbnails
-                setSelectedImageId(null);
-            } else {
-                setIsImageSelected(true);               
-                setSelectedImageId(id);
 
-                // Set the main video to the one clicked in the thumbnail
-                const selectedVideo = video.find(v => v.id === id);
-                if (selectedVideo) {
-                    setMainVideo(selectedVideo.url);
-                }
+                setIsImageSelected(false);
+                setSelectedImageId(null);
+                setMainVideo(mainVideo)
+            } else {
+
+                setIsImageSelected(true);
+                setSelectedImageId(id);
             }
         };
 
@@ -213,7 +155,6 @@ export default function Home() {
                             ))}
                         </div>
                     </div>
-
                     <div>
                         <ReactPlayer height={'50%'} width={'50%'} url={mainVideo} style={{ marginTop: '20px' }} />
                     </div>
@@ -223,8 +164,8 @@ export default function Home() {
                             <div style={{ display: 'flex', marginTop: 10, overflowX: 'scroll', overflowY: 'hidden', whiteSpace: 'nowrap', paddingBottom: '10px' }}>
                                 {(video || []).map((items) => (
                                     <div key={items.id} onClick={() => setMainVideo(items.url)} style={{ marginRight: '20px', display: 'flex', position: 'relative' }}>
-                                        <ReactPlayer height={'85px'} width={'135px'} url={items.url} controls={true} />
-                                        <div style={{ width: '90px', paddingTop: '15px', paddingLeft: '7px' }}>
+                                        <ReactPlayer height={'100px'} width={'120px'} url={items.url} controls={true} />
+                                        <div style={{ width: '90px', padding: '20px 0px 0px 10px' }}>
                                             <img src={items.img1} alt="" /> {items.time}
                                             <br />
                                             <img src={items.img2} style={{ padding: '7px 6px 9px 2px' }} alt="" />{items.reps}
@@ -247,7 +188,7 @@ export default function Home() {
                         </div>
                     </div>
                     {/* Images to Select */}
-                    <div className="popular-exercise" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gridGap: '10px', padding: '10px', height: '300px', overflowY: 'scroll' }}>
+                    <div className="popular-exercise" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gridGap: '10px', padding: '10px', height: '343px', overflowY: 'scroll' }}>
                         {imageItems.map((_, index) => (
                             <div
                                 key={index}
@@ -280,74 +221,11 @@ export default function Home() {
             </div>
         );
     }
-    const Footer = () => {
-        const [selected, setSelected] = useState(null);
-
-        const handleClick = (meal: any) => {
-            setSelected(meal);
-        };
-        return (
-            <div className="footer" style={{ border: '1px solid #D7D7D7', marginTop: '10px' }} >
-                <div className="footer-text">
-                    <text>Today’s Diet</text>
-                </div>
-                <div style={{ display: 'flex', padding: '20px' }}>
-                    <div className="diet-plan">
-                        {(diet || []).map((item: any) =>
-                        (
-                            <div key={item?.id}>
-                                <div style={{ margin: '30px' }}>
-                                    <img src={item?.pic1} style={{ paddingLeft: '35px' }} /><br />
-                                    <text style={{ paddingLeft: '5px' }}>{item.text}</text><br />
-                                    <text style={{ paddingLeft: '35px' }}>{item.calories}</text>
-                                </div>
-                            </div>
-                        )
-                        )}
-                    </div>
-                    <div>
-
-                    </div>
-                    <div className='diet-food' style={{ display: 'flex' }}>
-                        <div style={{ display: 'flex' }}>
-                            <button className="add-btn">+</button>
-                            <div style={{ display: 'flex', gap: '10px', }}>
-                                <div className="food-container">
-                                    <div>
-                                        <button
-                                            className={`food-time ${selected === "Breakfast" ? "selected" : ""}`}
-                                            onClick={() => handleClick("Breakfast")}>Breakfast</button>
-                                        <button className="food-time">Lunch</button>
-                                        <button className="food-time">Snaks</button>
-                                    </div>
-                                    <div style={{ display: 'flex' }}>
-                                        <div className="food-items" style={{}}>
-                                            <label htmlFor="name" style={{ paddingTop: '10px', paddingLeft: '28px' }}>Idly</label><br />
-                                            <input type="value" value={6} style={{ height: '26px', width: '61px', marginLeft: '10px', marginTop: '5px', border: 'none', paddingLeft: '10px' }}></input>
-                                        </div>
-                                        <div className="food-items">
-                                            <label htmlFor="name" style={{ paddingTop: '10px', paddingLeft: '22px' }}>Vada</label><br />
-                                            <input type="value" value={6} style={{ height: '26px', width: '61px', marginLeft: '10px', marginTop: '5px', border: 'none', paddingLeft: '10px' }}></input>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        )
-    }
-
     return (
-        <div className="Activity-Screen">
-            {navbar()}
-            <div style={{ padding: 10 }}>
-                {todaysActivity()}
-                {ExerciseVideo()}
-                {Footer()}
-            </div>
-
+        <div>
+            {Navbar()}
+            {ProfileDetail()}
+            {ExerciseVideo()}
         </div>
     )
 }

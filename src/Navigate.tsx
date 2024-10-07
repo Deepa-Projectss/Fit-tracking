@@ -10,6 +10,7 @@ import ReadySetGo from "./component/Information/ReadySet/readySet";
 import Home from "./component/CommonComponent/home";
 import Diet from "./component/CommonComponent/diet";
 import Report from "./component/CommonComponent/report";
+import PersonLogin from "./component/CommonComponent/personLogin";
 
 export default function Navigate() {
     return (
@@ -26,6 +27,7 @@ export default function Navigate() {
             <Route path="/home" element={<Home />} />
             <Route path="/diet" element={< Diet />} />
             <Route path="/report" element={< Report />} />
+            <Route path="/personLogin" element={<PersonLogin/>}/>
         </Routes>
     )
 }

@@ -1,0 +1,29 @@
+.profile-imgs{
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+.profile-text{
+ margin-top: 50px;
+ margin-left: 15px;
+}
+.changing-password{
+    background-color: #026900;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 3px;
+    height: 40px;
+    width: 150px;
+    margin-left: 63%;
+    margin-top: 30px;
+}
+.loging-out{
+    height: 40px;
+    width: 150px;
+    background: #FFFFFF;
+    color: #F96118;
+    border: 1px solid #F96118;
+    border-radius: 3px;
+    margin-left: 63%;
+    margin-top: 15px;
+}

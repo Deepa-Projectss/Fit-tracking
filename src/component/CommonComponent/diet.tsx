@@ -1,17 +1,14 @@
 import React, { useState } from "react";
 import './diet.css'
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Diet() {
-
-    const navigate = useNavigate();
 
     const [selected, setSelected] = useState(null);
 
     const handleClick = (meal: any) => {
         setSelected(meal);
     };
-    
 
     const diet = [
         {
@@ -64,7 +61,14 @@ export default function Diet() {
             id: 9, overallCalories: '3600', caloriesTaken: '3600', extraTaken: '0', Date: '29/04/2024'
         },
     ]
-    const navbars = () => {
+
+    const Navbars = () => {
+        const location = useLocation(); // Get the current location
+        const navigate = useNavigate();
+
+        const getNavItemStyle = (path: any) => {
+            return location.pathname === path ? { color: '#F96118' } : {};
+        };
         return (
             <nav className=" navbar-light header-nav">
                 <div className='fit-img'>
@@ -72,19 +76,19 @@ export default function Diet() {
                 </div>
                 <div className="nav-menu">
                     <div className='nav-items' onClick={() => navigate('/home')}>
-                        <img src={require('../../images/home-img.svg').default} alt="" />
+                        <img src={require('../../images/home-img.svg').default} alt="" style={{ cursor: 'pointer' }} />
                         <span className='text-name' >Home</span>
                     </div>
-                    <div className="nav-items" onClick={() => navigate('/diet')}>
-                        <img src={require('../../images/diet-img.svg').default} alt="" />
+                    <div className="nav-items" style={{...getNavItemStyle('/diet'),cursor:'pointer'}} onClick={() => navigate('/diet')}>
+                        <img src={require('../../images/diet-img.svg').default} alt="" style={{ cursor: 'pointer' }} />
                         <text className='text-name' style={{ textAlign: 'center' }}>Diet</text>
                     </div>
                     <div className="nav-items" onClick={() => navigate('/report')}>
-                        <img src={require('../../images/report-img.svg').default} alt="" />
+                        <img src={require('../../images/report-img.svg').default} alt="" style={{ cursor: 'pointer' }} />
                         <text className='text-name'>Report</text>
                     </div>
                 </div>
-                <div className="profile-img">
+                <div className="profile-img" onClick={() => navigate('/personLogin')} style={{ cursor: 'pointer' }}>
                     <img src={require('../../images/profile-img.svg').default} alt="" />
                 </div>
             </nav>
@@ -145,6 +149,7 @@ export default function Diet() {
             </div>
         )
     }
+
     const previousDiet = () => {
         return (
             <div className="previous-Diet">
@@ -170,7 +175,7 @@ export default function Diet() {
                                 <th><img src={require('../../images/overallCalories-img.svg').default} style={{ padding: '5px' }} alt="" />Overall Calories</th>
                                 <th><img src={require('../../images/caloriestaken-img.svg').default} style={{ padding: '5px' }} alt="" />Calories Taken</th>
                                 <th><img src={require('../../images/extraTaken-img.svg').default} style={{ padding: '7px' }} alt="" />Extra Taken</th>
-                                <th><img src={require('../../images/Clock-timer.svg').default} style={{padding:'7px'}} alt="" />Date</th>
+                                <th><img src={require('../../images/Clock-timer.svg').default} style={{ padding: '7px' }} alt="" />Date</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -192,7 +197,7 @@ export default function Diet() {
 
     return (
         <div>
-            {navbars()}
+            {Navbars()}
             {header()}
             {previousDiet()}
         </div>

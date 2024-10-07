@@ -31,9 +31,6 @@
     border: 1px solid #F96118;
     background-color: #F9611826;
 }
-.option:hover{
-    color:#F96118;
-}
 .btn-options{
     display: flex;
     justify-content: center;
